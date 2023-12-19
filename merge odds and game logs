@@ -1,0 +1,38 @@
+```{r merge data, warning=FALSE, message=FALSE}
+
+# Merge gameLogs and oddsData:
+data <- merge(gameLogs, oddsData, by = c("date", "team", "gameNumber"), all = TRUE)
+
+# Create temporary data frame to add opponent line data:
+oddsDataTemp <- data[, c("date", "team", "gameNumber", "opponent", "line", "runLine", "runLineOdds")]
+
+# Merge with original data, matching opponent in original data to team in temporary data:
+dataTemp <- merge(data, oddsDataTemp, 
+                  by.x = c("date", "opponent", "gameNumber"), 
+                  by.y = c("date", "team", "gameNumber"))
+
+# Rename columns:
+names(dataTemp)[names(dataTemp) %in% c("line.x", "runLine.x", "runLineOdds.x")] <- c("moneyLine", "runLine", "runLineOdds")
+names(dataTemp)[names(dataTemp) %in% c("line.y", "runLine.y", "runLineOdds.y")] <- c("oppMoneyLine", "oppRunLine", "oppRunLineOdds")
+
+# Select columns and assign dataTemp to data: 
+data <- dataTemp %>% 
+  select(
+    date, season, team, opponent, runs, oppRuns,
+    moneyLine, runLine, runLineOdds, total, overOdds, underOdds,
+    oppMoneyLine, oppRunLine, oppRunLineOdds
+  )
+
+# Create 'totalRuns' column :
+data$totalRuns <- data$runs + data$oppRuns
+
+# Delete oddsDataTemp:
+rm(oddsDataTemp)
+
+# Delete dataTemp:
+rm(dataTemp)
+
+# View data:
+str(data)
+
+```  
