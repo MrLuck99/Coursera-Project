@@ -1,0 +1,27 @@
+```sql
+
+SELECT * 
+FROM
+(
+  SELECT * FROM `vast-logic-393202.baseballOdds.odds2012`
+  UNION ALL
+  SELECT * FROM `vast-logic-393202.baseballOdds.odds2013`
+  UNION ALL
+  SELECT * FROM `vast-logic-393202.baseballOdds.odds2014`
+  UNION ALL
+  SELECT * FROM `vast-logic-393202.baseballOdds.odds2015`
+  UNION ALL
+  SELECT * FROM `vast-logic-393202.baseballOdds.odds2016`
+  UNION ALL
+  SELECT * FROM `vast-logic-393202.baseballOdds.odds2017`
+  UNION ALL
+  SELECT * FROM `vast-logic-393202.baseballOdds.odds2018`
+  UNION ALL
+  SELECT * FROM `vast-logic-393202.baseballOdds.odds2019`
+  UNION ALL
+  SELECT * FROM `vast-logic-393202.baseballOdds.odds2020`
+  UNION ALL
+  SELECT * FROM `vast-logic-393202.baseballOdds.odds2021`
+)
+
+```
