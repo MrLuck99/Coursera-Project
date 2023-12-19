@@ -61,8 +61,9 @@ The game logs have data for both teams in each game in a single row.  The odds d
   - created game number column from double header info 
   - created 'season' column by extracting year from date column
   - selected columns needed for analysis
-  - 
-Click[]() to view code.
+    
+Click [here](https://github.com/MrLuck99/Coursera-Project/blob/main/edit%20retrosheet%20data) to view code.
+
 
 I then merged this data with our odds data. I also created separate columns for: 
 
@@ -71,7 +72,8 @@ I then merged this data with our odds data. I also created separate columns for:
   - opponent run line odds
   - total runs (runs + opponent runs)
 
-Click[]() to view code.
+Click [here](https://github.com/MrLuck99/Coursera-Project/blob/main/merge%20odds%20and%20game%20logs) to view code.
+
 
 Before I started my analysis, I used the summary() function to check the data for missing values.  There are some NA values in the runLine and runLineOdds columns that I need to account for later on.
 
