@@ -1,0 +1,71 @@
+```{r process game logs, warning=FALSE, message=FALSE}
+
+# Create table for visiting teams:
+visitor.gl <- combined_gamelog
+
+# Rename the remaining columns:
+colnames(visitor.gl) <- c('date', 'DblHdr', 'team', 'opponent', 'runs',
+                          'oppRuns', 'ParkID', 'hits', 'doubles', 'triples',
+                          'HR', 'RBI', 'HBP', 'BB', 'SB',
+                          'pitcherERs', 'oppHits', 'oppDoubles', 'oppTriples', 'oppHR',
+                          'oppRBI', 'oppHBP', 'oppBB', 'oppSB', 'oppPitcherERs',
+                          'pitcherID', 'pitcherName', 'oppPitcherID', 'oppPitcherName')
+
+# Create table for home teams:
+home.gl <- combined_gamelog
+
+# Rename the remaining columns:
+colnames(home.gl) <- c('date', 'DblHdr', 'opponent', 'team', 'oppRuns',
+                       'runs', 'ParkID', 'oppHits', 'oppDoubles', 'oppTriples',
+                       'oppHR', 'oppRBI', 'oppHBP', 'oppBB', 'oppSB',
+                       'oppPitcherERs', 'hits', 'doubles', 'triples', 'HR',
+                       'RBI', 'HBP', 'BB', 'SB', 'pitcherERs',
+                       'oppPitcherID', 'oppPitcherName', 'pitcherID', 'pitcherName')
+
+# Reorder the columns to match visitor.gl:
+home.gl <- home.gl[, c('date', 'DblHdr', 'team', 'opponent', 'runs',
+                       'oppRuns', 'ParkID', 'hits', 'doubles', 'triples',
+                       'HR', 'RBI', 'HBP', 'BB', 'SB',
+                       'pitcherERs', 'oppHits', 'oppDoubles', 'oppTriples', 'oppHR',
+                       'oppRBI', 'oppHBP', 'oppBB', 'oppSB', 'oppPitcherERs',
+                       'pitcherID', 'pitcherName', 'oppPitcherID', 'oppPitcherName')]
+
+
+# Combine home and visitor to create full table of games:
+gameLogs <- rbind(visitor.gl, home.gl)
+
+
+# Change team abbreviations to match odds data:
+Find <- c('WAS', 'TOR', 'TBA', 'SLN', 'SFN', 'SEA', 'PIT', 'PHI', 'NYA', 'MIN', 
+          'MIL', 'MIA', 'LAN', 'KCA', 'COL', 'CHA', 'BOS', 'ATL', 'ANA', 'ARI', 
+          'CIN', 'DET', 'CLE', 'TEX', 'OAK', 'BAL', 'SDN', 'HOU', 'NYN', 'CHN')
+
+Replace <- c('WSH', 'TOR', 'TB', 'STL', 'SF', 'SEA', 'PIT', 'PHI', 'NYY', 'MIN', 
+             'MIL', 'MIA', 'LAD', 'KC', 'COL', 'CWS', 'BOS', 'ATL', 'LAA', 'ARI', 
+             'CIN', 'DET', 'CLE', 'TEX', 'OAK', 'BAL', 'SD', 'HOU', 'NYM', 'CHC')
+
+# Change team abbreviations:
+gameLogs$team <- Replace[match(gameLogs$team, Find)]
+gameLogs$opponent <- Replace[match(gameLogs$opponent, Find)]
+
+# Change date column from integer to proper date format:
+gameLogs$date <- as.Date(as.character(gameLogs$date), format = "%Y%m%d")
+
+# Create gameNumber column (needed to join with odds data) from double header information:
+gameLogs <- gameLogs %>%
+  mutate(gameNumber = ifelse(DblHdr %in% c(0, 1), 1, 2))
+
+# Create 'season' column by extracting year from date column:
+gameLogs$season <- year(gameLogs$date)
+
+# Select columns: 
+gameLogs <- gameLogs %>%
+  select(date, team, opponent, runs, oppRuns, gameNumber, season)
+
+# Remove unnecessary items:
+rm(home.gl, visitor.gl, gamelog, combined_gamelog)
+
+# View gameLogs:
+head(gameLogs)
+
+```
