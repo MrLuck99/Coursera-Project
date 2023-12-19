@@ -1,0 +1,22 @@
+```{r get game logs, warning=FALSE, message=FALSE}
+
+# Define the range of years to get data for:
+years <- 2012:2021
+
+# Create an empty data frame to store the data for all years:
+combined_gamelog <- data.frame()
+
+# Loop through each year and fetch the game log data:
+for (year in years) {
+  gamelog <- getPartialGamelog(year, glFields = c('Date', 'DblHdr', 'VisTm', 'HmTm', 'VisRuns',
+                                                  'HmRuns', 'ParkID', 'VisH', 'VisD', 'VisT',
+                                                  'VisHR', 'VisRBI', 'VisHBP', 'VisBB', 'VisSB',
+                                                  'VisER', 'HmH', 'HmD', 'HmT', 'HmHR',
+                                                  'HmRBI', 'HmHBP', 'HmBB', 'HmSB', 'HmER',
+                                                  'VisStPchID', 'VisStPchNm', 'HmStPchID', 'HmStPchNm'))
+  
+# Append the current year's data to the combined data frame:
+  combined_gamelog <- rbind(combined_gamelog, gamelog)
+}
+
+```
