@@ -42,4 +42,38 @@ SELECT COUNT(*) AS underOdds_NULL_COUNT
 FROM `vast-logic-393202.baseballOdds.odds` 
 WHERE underOdds IS NULL;
 
+--checking for total count of null values in all columns in the data
+
+SELECT
+(SELECT COUNT(*)
+FROM `vast-logic-393202.baseballOdds.odds` 
+WHERE date IS NULL) +
+(SELECT COUNT(*)
+FROM `vast-logic-393202.baseballOdds.odds` 
+WHERE 'at' IS NULL) +
+(SELECT COUNT(*)
+FROM `vast-logic-393202.baseballOdds.odds` 
+WHERE team IS NULL) +
+(SELECT COUNT(*)
+FROM `vast-logic-393202.baseballOdds.odds` 
+WHERE gameNumber IS NULL) +
+(SELECT COUNT(*)
+FROM `vast-logic-393202.baseballOdds.odds` 
+WHERE line IS NULL) +
+(SELECT COUNT(*)
+FROM `vast-logic-393202.baseballOdds.odds` 
+WHERE runLine IS NULL)  +
+(SELECT COUNT(*)
+FROM `vast-logic-393202.baseballOdds.odds` 
+WHERE runLineOdds IS NULL) AS total_null_count +
+(SELECT COUNT(*)
+FROM `vast-logic-393202.baseballOdds.odds` 
+WHERE total IS NULL) AS total_null_count +
+(SELECT COUNT(*)
+FROM `vast-logic-393202.baseballOdds.odds` 
+WHERE overOdds IS NULL) AS total_null_count +
+(SELECT COUNT(*)
+FROM `vast-logic-393202.baseballOdds.odds` 
+WHERE underOdds IS NULL) AS total_null_count AS total_null_count;
+
 ```
