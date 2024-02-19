@@ -85,6 +85,6 @@ data to create a summary table and a plot for each of our line types.
 
 ## Share
 
-![moneyLinePlot1.png](https://github.com/MrLuck99/Coursera-Project/blob/main/moneyLinePlot1.png)https://github.com/MrLuck99/Coursera-Project/blob/main/moneyLinePlot1.png
+Click [here](https://rpubs.com/ctreasure79/1123722) to view summary.
 
 ## Act
