@@ -83,6 +83,8 @@ started my analysis by calculating the count of each type of line, how often
 the favorite covered this line, and the percentage of time the line covered.  I used this
 data to create a summary table and a plot for each of our line types.
 
+![moneyLinePlot1]
+
 ## Share
 
 Click [here](https://rpubs.com/ctreasure79/1123722) to view summary.
