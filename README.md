@@ -83,6 +83,14 @@ started my analysis by calculating the count of each type of line, how often
 the favorite covered this line, and the percentage of time the line covered.  I used this
 data to create a summary table and a plot for each of our line types.
 
+
+| Money Line | Count | Cover | Percentage |
+| ------------ | ----------- | ------------ | ------------ |
+| favorites | 22195 | 12938 | 58.3 |
+| dogs | 22195 | 9256 |	41.7 |
+| even | 1140 | - | - |
+
+
 ![moneyLinePlot1](moneyLinePlot1.png)
 
 ## Share
