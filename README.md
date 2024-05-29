@@ -93,6 +93,12 @@ data to create a summary table and a plot for each of our line types.
 
 ![moneyLinePlot1](moneyLinePlot1.png)
 
+| Total | Count | Cover | Percentage |
+| ------------ | ----------- | ------------ | ------------ |
+| over | 9106 | 4377 | 48.1 |
+| under | 9560 | 4738 |	49.6 |
+| both | 18666 | 9115 | 48.4 |
+
 ## Share
 
 Click [here](https://rpubs.com/ctreasure79/1123722) to view summary.
