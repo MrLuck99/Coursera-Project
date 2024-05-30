@@ -99,6 +99,19 @@ data to create a summary table and a plot for each of our line types.
 | under | 9560 | 4738 |	49.6 |
 | both | 18666 | 9115 | 48.4 |
 
+![totalPlot1](totalPlot1.png)
+
+![totalPlot2](totalPlot2.png)
+
+| Run Line | Count | Favorites | Cover | Percentage | Dogs | Cover | Percentage | Total%
+| ------------ | ----------- | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
+| 1.5 | 17904 | 2344 | 1271 | 54.2 | 15098 | 6113 | 40.5 | 42.3 |
+| 1.5	| 17904	| 15098 |	8985 |	59.5 |	2344 |	1073 |	45.8 |	57.7 |
+| Total |	35808 |	17442 |	10256 |	58.8 |	17442 |	7186 |	41.2 |	50.0 |
+
+![runLineOddsPlot1](runLinePlot1.png)
+
+![runLineOddsPlot2](runLinePlot2.png)
 ## Share
 
 Click [here](https://rpubs.com/ctreasure79/1123722) to view summary.
