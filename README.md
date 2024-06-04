@@ -91,7 +91,7 @@ data to create a summary table and a plot for each of our line types.
 | even | 1140 | - | - |
 
 
-![moneyLinePlot1](moneyLinePlot1.png)
+![moneyLinePlot33](moneyLinePlot33.png)
 
 | Total | Count | Cover | Percentage |
 | ------------ | ----------- | ------------ | ------------ |
