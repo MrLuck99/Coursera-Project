@@ -93,7 +93,7 @@ data to create a summary table and a plot for each of our line types.
 
 ![moneyLinePlot33](moneyLinePlot33.png)
 
-![moneyLinePlot1.1](moneyLinePlot1.1.png)
+![moneyLinePlot1.5](moneyLinePlot1.5.png)
 
 | Total | Count | Cover | Percentage |
 | ------------ | ----------- | ------------ | ------------ |
