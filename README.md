@@ -101,7 +101,7 @@ data to create a summary table and a plot for each of our line types.
 | under | 9560 | 4738 |	49.6 |
 | both | 18666 | 9115 | 48.4 |
 
-![totalPlot1](totalPlot1.png)
+![totalPlot1.3](totalPlot1.3.png)
 
 ![totalPlot2](totalPlot2.png)
 
