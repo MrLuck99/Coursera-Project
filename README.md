@@ -111,9 +111,9 @@ data to create a summary table and a plot for each of our line types.
 | 1.5	| 17904	| 15098 |	8985 |	59.5 |	2344 |	1073 |	45.8 |	57.7 |
 | Total |	35808 |	17442 |	10256 |	58.8 |	17442 |	7186 |	41.2 |	50.0 |
 
-![runLineOddsPlot9](runLinePlot9.png)
+![runLineOddsPlot1.2](runLinePlot1.2.png)
 
-![runLineOddsPlot10](runLinePlot10.png)
+![runLineOddsPlot2.2](runLinePlot2.2.png)
 ## Share
 
 Click [here](https://rpubs.com/ctreasure79/1123722) to view summary.
