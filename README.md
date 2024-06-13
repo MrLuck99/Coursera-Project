@@ -113,7 +113,7 @@ data to create a summary table and a plot for each of our line types.
 
 ![runLineOddsPlot1.2](runLinePlot1.2.png)
 
-![runLineOddsPlot2.2](runLinePlot2.2.png)
+![runLineOddsPlot2.4](runLinePlot2.4.png)
 ## Share
 
 Click [here](https://rpubs.com/ctreasure79/1123722) to view summary.
