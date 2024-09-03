@@ -177,6 +177,23 @@ This next plot helps to explain the weak correlation.  We can see that the avera
 
 ## Share
 
-Click [here](https://rpubs.com/ctreasure79/1123722) to view summary.
+
+
+### **<span style="font-size: 24px;">Summary</span>**
+
+| Favorite | Percent Covered |
+| ------------ | ----------- |
+| Run Line Dogs | 59.5 |
+| Run Line Odds (overall) | 58.8 |
+| Money Line | 58.3 |
+| Run Line Favorites | 54.2 |
+| Under | 49.6 |
+| Total (overall) | 48.4 |
+| Over | 48.1 |
+
+
+
 
 ## Act
+
+Run line odds favorites and money line favorites successfully cover over 58% of the time, with teams favored as run line underdogs showing the highest success rate at 59.5%. The data indicates that the most exploitable lines for sports bettors are those related to game totals. While the predicted game total generally aligns with actual runs scored, the high variance results in less reliable outcomes for over/under bets. Based on these findings, FantasyAce should prioritize run line and money line odds for their predictive value when developing player projections and models, while also targeting over/under lines to identify inefficiencies that could lead to profitable wagering opportunities.
