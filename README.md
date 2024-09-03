@@ -98,8 +98,8 @@ The money line is simply the odds that a team will win a game outright.  For ins
 New York -140 @ Oakland +155
 </p>
 
-The team with the smaller number, in this case New York at -140, are considered the money line favorite.  Whoever wins, regardless of score, covers. If the money line is even for both teams, then neither team is a money line favorite. 
-In our data set, there are 22,195 favorites, 22,195 underdogs, and 1140 instances where the team has the same money line as their opponent. 
+The team with the smaller number, in this case New York at -140, is considered the money line favorite.  Whoever wins, regardless of score, covers. If the money line is even for both teams, then neither team is a money line favorite. 
+In our data set, there are 22,195 favorites, 22,195 underdogs, and 1,140 instances where both teams have the same money line. 
 
 | Money Line | Count | Cover | Percentage |
 | ------------ | ----------- | ------------ | ------------ |
@@ -115,6 +115,35 @@ This second plot shows a similar relationship between the money line and the run
 
 ![moneyLinePlot2](moneyLinePlot2.png)
 
+
+#### Run Line
+
+Run lines are the baseball version of a point spread. The spread is always 1.5 runs, meaning the favorite must win by two or more runs to cover the spread, or the underdog must lose by one run or win the game outright to cover the spread. In this example, Houston is favored to win the game, with a run line of -1.5.  However, they are not a favorite to cover this spread, with odds of +150. Therfore, Chicago is favored to cover the run line. 
+
+<p align="center">
+Chicago&nbsp;&nbsp;&nbsp; +1.5&nbsp;&nbsp;&nbsp;&nbsp;-182
+
+</p>
+<p align="center">
+ @
+</p>
+<p align="center">
+Houston&nbsp;&nbsp;&nbsp; -1.5&nbsp;&nbsp;&nbsp;&nbsp;+150
+</p>
+
+| Run Line | Count | Favorites | Cover | Percentage |
+| ------------ | ----------- | ------------ | ------------ | ------------ |
+| -1.5 | 17904 | 2344 | 1271 | 54.2 |
+| +1.5 | 17904 | 15098 |	8985 | 59.5 |
+| Total | 35808 | 17442 | 10256 | 58.8 |
+
+This first run line plot demonstrates the relationship between the strength of the run line odds and the chances of covering. As the odds get stronger, the chances of covering increase.
+
+![runLineOddsPlot1.3](runLinePlot1.3.png)
+
+This second plot shows the run differential by run line odds.  The blue dots above the top dotted line, and the red dots between the two dotted lines represent covers.
+
+![runLineOddsPlot2.4](runLinePlot2.4.png)
 
 #### Total
  The total is the line set on the number of runs scored in a game by both teams.  Each side of this line is assigned odds.  For example, in this game between Saint Louis and Milwaukee, the total has been set at 7.5 and the over is favored with odds of -128.:
@@ -146,15 +175,6 @@ This next plot helps to explain the weak correlation.  We can see that the avera
 
 ![totalPlot2](totalPlot2.png)
 
-| Run Line | Count | Favorites | Cover | Percentage | Dogs | Cover | Percentage | Total%
-| ------------ | ----------- | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
-| 1.5 | 17904 | 2344 | 1271 | 54.2 | 15098 | 6113 | 40.5 | 42.3 |
-| 1.5	| 17904	| 15098 |	8985 |	59.5 |	2344 |	1073 |	45.8 |	57.7 |
-| Total |	35808 |	17442 |	10256 |	58.8 |	17442 |	7186 |	41.2 |	50.0 |
-
-![runLineOddsPlot1.3](runLinePlot1.3.png)
-
-![runLineOddsPlot2.4](runLinePlot2.4.png)
 ## Share
 
 Click [here](https://rpubs.com/ctreasure79/1123722) to view summary.
