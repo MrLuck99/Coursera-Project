@@ -52,7 +52,8 @@ I used excel to open and work with the 10 odds data csv files. I created pivot t
 
 
 I then uploaded these files to BigQuery. I used SQL to join these tables together and then uploaded these into R Studio. Click [here](SQL%20join%20files)
- to see the SQL query used to join the files.
+to see the SQL query used to join the files.  I then wrote a query to check for NA values in the data.  There are some NA values in the 'runLine' and 'runLineOdds' columns that I need to account for later on.  Click [here](SQL%20check%20for%20NA%20values)
+
 
 I then used the “retrosheet” package to obtain the necessary game data. I saved this as "gameLogs". Click [here](https://github.com/MrLuck99/Coursera-Project/blob/main/retrosheet%20data) to see the r code used to fetch game data using the retrosheet package.
 
@@ -81,7 +82,6 @@ I then merged this data with our odds data. I also created separate columns for:
 Click [here](https://github.com/MrLuck99/Coursera-Project/blob/main/merge%20odds%20and%20game%20logs) to view code.
 
 
-Before I started my analysis, I used the summary() function to check the data for missing values.  There are some NA values in the runLine and runLineOdds columns that I need to account for later on.
 
 This gave me a sample of 45,530 rows of data representing each team involved in 
 22,765 games. I selected a sample row from our data to help explain each type of line. I then
