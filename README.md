@@ -51,7 +51,7 @@ I used excel to open and work with the 10 odds data csv files. I created pivot t
 - [2021](https://storage.googleapis.com/mlb_odds/odds2020.xlsx)
 
 
-I then uploaded these files to BigQuery. I used SQL to join these tables together and then uploaded these into R Studio. Click [here](https://github.com/MrLuck99/Coursera-Project/blob/main/SQL) to see the SQL query used to join the files.
+I then uploaded these files to BigQuery. I used SQL to join these tables together and then uploaded these into R Studio. Click [here](https://github.com/MrLuck99/Coursera-Project/blob/main/Coursera-Project/SQL%20join%20files) to see the SQL query used to join the files.
 
 I then used the “retrosheet” package to obtain the necessary game data. I saved this as "gameLogs". Click [here](https://github.com/MrLuck99/Coursera-Project/blob/main/retrosheet%20data) to see the r code used to fetch game data using the retrosheet package.
 
